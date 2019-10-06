@@ -1,0 +1,29 @@
+body {
+    background-color: #F0F4F7;
+}
+
+.contentArea {
+    background-color: white;
+    opacity: .9;
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+}
+
+textarea {
+    display: inline-block;
+    width: 100%;
+    border: 2px dotted lightsteelblue;
+    text-align: center;
+}
+
+
+h2, button, textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
