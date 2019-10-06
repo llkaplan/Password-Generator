@@ -4,32 +4,37 @@ var copyBtn = document.getElementById('copy');
 // password related
 var passwordChanged = document.getElementById('password');
 
-//For first pop-up
+var passwordSecure = 'password';
+
+
+/*For first pop-up */
 generateBtn.addEventListener("click", function firstPopup(){
+    event.preventDefault();
     var numbersQuestion = confirm("Do you want numbers?");
     numbersQuestion;
     
-    if (numbersQuestion = true){
+    if (numbersQuestion = confirm){
 
-        var numberPW = (Math.floor(math.random() * 10));
+        var numbersPrompt = prompt("How many numbers would you want? Between 1 and 10");
+        var numberOfNums = parseInt(numbersPrompt);
 
-        numberPW.textContent = passwordChanged;
+        if (numberOfNums > 0 && numberOfNums < 11) {
 
+            function makeId() {
+                var result = '';
+                var nums = '0123456789';
+                var numsLength = nums.length;
+                for (var i = 0; i < numberOfNums; i++) {
+                   result += nums.charAt(Math.floor(Math.random() * numsLength));
+                }     
+                return result;
+             }
+             var numsPW = makeId(numberOfNums);
+             console.log(numsPW);
+        } else {
+            alert('you need to select a number between 1 and 10');
+        }
 
-    } else {}
-
-    var lowercaseQuestion = confirm("Do you want lowercase letters?");
-    lowercaseQuestion;
-
-    if (lowercaseQuestion = true) {
-        var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
-        var lCLettersSplit = lowerCaseLetters.split('');
-
-
-    }
+    } else {return}
 
 });
-
-
-
-console.log(getRandomInt(numbersSplit.length))
