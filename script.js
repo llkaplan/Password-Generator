@@ -112,6 +112,27 @@ generateBtn.addEventListener("click", function generatingPW(){
          console.log(specialCharPW);
     }} else {return}
 
+    var pwQuestion = confirm("Ready to see your new password?");
+    pwQuestion;
 
+    if (pwQuestion = confirm) {
+
+        var passwordSecure = specialCharPW + lowercasePW + uppercasePW + numsPW;
+
+        var shuffledPW = passwordSecure.split('').sort(function(){return 0.5-Math.random()}).join('');
+
+        console.log(shuffledPW);
+
+        passwordChanged.textContent = shuffledPW;
+
+
+
+    } else {return}
 
 });
+
+copyBtn.addEventListener("click", function copyingPW(){
+    passwordChanged.select();
+    document.execCommand("copy");
+});
+
